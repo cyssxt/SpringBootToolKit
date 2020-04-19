@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>com.cyssxt</id>
+    <name>RestfulTool</name>
+    <vendor email="cyssxt@163.com" url="http://www.cyssxt.com">cyssxt</vendor>
+
+    <description>Restful Api Tools,used to tip and test tool kits.</description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <toolWindow factoryClass="com.cyssxt.toolwindow.factory.MainToolWindowFactory" anchor="right" id="Restful"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="NameAction" class="NameAction" text="Name" description="Choose Name">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+        <action id="NameTipAction" class="NameTipAction" text="Translate" description="Translate Name">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
